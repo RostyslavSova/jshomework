@@ -3,14 +3,19 @@ const b = parseFloat(prompt('Enter b'));
 const c = parseFloat(prompt('Enter c'));
 let answer =[];
 solveQuadraticEquation(a,b,c);
-document.write('For your coefficient: ' + a + ', ' + b + ', ' + c + ';<br>'
+if (isNaN(answer[0])){
+    document.write('For your coefficient: ' + a + ', ' + b + ', ' + c + ';<br>'
+          +'Aswer is: '+answer[0] +' '+answer[1] );
+} else {
+    document.write('For your coefficient: ' + a + ', ' + b + ', ' + c + ';<br>'
           +'Aswer is: '+answer[0] +' and '+answer[1] );
+}
 
 function solveQuadraticEquation (a,b,c) {
 // if one of coefficient = 0  
     if (a === 0 && b === 0 && c === 0){
         answer[0]=answer[1]=0;
-        return
+        return;
     }
     if (a === 0 || b === 0 || c === 0) {
         if (a === 0){
