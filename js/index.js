@@ -23,7 +23,7 @@ function solveQuadraticEquation (a,b,c) {
             answer[0] = answer[1] =x;
             return;
         } else if (b === 0) {
-            if (-c/a < 0){
+            if ((c*-1)/a < 0){
               answer[0]='that equation has no real roots';
               answer[1]='';
                 return;
